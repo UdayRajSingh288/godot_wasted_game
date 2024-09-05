@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://gqud8qeen0fq"]
+
+[ext_resource type="PackedScene" uid="uid://dtu1ji1qxgtye" path="res://test/prisoner.gltf" id="1_3765p"]
+[ext_resource type="Texture2D" uid="uid://qqilqq8pqvne" path="res://level/level_textures.png" id="2_dtmyv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i4pdn"]
+albedo_texture = ExtResource("2_dtmyv")
+emission_enabled = true
+emission_energy_multiplier = 3.0
+emission_texture = ExtResource("2_dtmyv")
+
+[node name="guard" instance=ExtResource("1_3765p")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/rotation = Quaternion(-0.00609232, 1.34457e-18, 1.34457e-18, 0.999981)
+bones/1/rotation = Quaternion(0.216031, -1.05295e-16, -1.06001e-16, 0.976386)
+bones/2/rotation = Quaternion(0.00842383, -0.0191323, 0.983707, -0.178557)
+bones/3/rotation = Quaternion(0.197573, -0.00893135, -0.0788976, 0.977067)
+bones/4/rotation = Quaternion(0.0711923, -0.06527, -0.130113, 0.986784)
+bones/5/rotation = Quaternion(0.999052, 0.0356064, 0.002394, 0.0249446)
+bones/5/scale = Vector3(1.00001, 1, 1)
+bones/6/rotation = Quaternion(0.104249, 0.0011474, -0.00100628, 0.99455)
+bones/7/rotation = Quaternion(-0.705462, -0.122086, -0.120697, 0.687642)
+bones/8/rotation = Quaternion(-0.00842383, -0.0191323, 0.983707, 0.178557)
+bones/9/rotation = Quaternion(0.197573, 0.00893135, 0.0788976, 0.977067)
+bones/10/rotation = Quaternion(0.0711923, 0.06527, 0.130113, 0.986784)
+bones/11/rotation = Quaternion(0.999052, -0.0356064, -0.002394, 0.0249446)
+bones/11/scale = Vector3(1.00001, 1, 1)
+bones/12/rotation = Quaternion(0.104249, -0.0011474, 0.00100628, 0.99455)
+bones/13/rotation = Quaternion(-0.705462, 0.122086, 0.120697, 0.687642)
+
+[node name="Cube" parent="Armature/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_i4pdn")

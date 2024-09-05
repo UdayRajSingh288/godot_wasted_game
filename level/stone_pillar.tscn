@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://de2t67wo6506w"]
+
+[ext_resource type="ArrayMesh" uid="uid://bt1g3u2ii3spf" path="res://level/stone_pillar.obj" id="1_d0qre"]
+[ext_resource type="Material" uid="uid://df8mlsywvwydx" path="res://level/level_material.tres" id="2_777sq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e5tbj"]
+size = Vector3(1.5, 3, 1.5)
+
+[node name="stone_pillar" type="StaticBody3D"]
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_d0qre")
+surface_material_override/0 = ExtResource("2_777sq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_e5tbj")

@@ -1,0 +1,15 @@
+GPUParticles3D
+AudioStreamPlayer3D
+MeshInstance3D
+BoneAttachment3D
+Skeleton3D
+AudioStreamPlayer
+CollisionShape3D
+PhysicalBone3D
+CharacterBody3D
+LightmapGI
+OmniLight3D
+Node3D
+StaticBody3D
+WorldEnvironment
+Area3D

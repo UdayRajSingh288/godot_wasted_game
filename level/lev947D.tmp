@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnj5th3fjof3n"]
+
+[ext_resource type="PackedScene" uid="uid://c236yoydo2kbu" path="res://test/arch_corridor.tscn" id="1_54n0m"]
+[ext_resource type="PackedScene" uid="uid://uh31tmqi2lw4" path="res://test/cross_arch_corridor.tscn" id="2_ig780"]
+[ext_resource type="PackedScene" uid="uid://d30cvqcc0ilcy" path="res://player/player.tscn" id="3_mm7mh"]
+
+[node name="level" type="Node3D"]
+
+[node name="arch_corridor" parent="." instance=ExtResource("1_54n0m")]
+
+[node name="arch_corridor3" parent="." instance=ExtResource("1_54n0m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -26)
+
+[node name="arch_corridor2" parent="." instance=ExtResource("1_54n0m")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 0, -7)
+
+[node name="arch_corridor4" parent="." instance=ExtResource("1_54n0m")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20, 0, -7)
+
+[node name="cross_corridor" parent="." instance=ExtResource("2_ig780")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
+[node name="cross_corridor2" parent="." instance=ExtResource("2_ig780")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -26)
+
+[node name="cross_corridor3" parent="." instance=ExtResource("2_ig780")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -26)
+
+[node name="cross_corridor4" parent="." instance=ExtResource("2_ig780")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+
+[node name="player" parent="." instance=ExtResource("3_mm7mh")]

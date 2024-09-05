@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm4h1dgfar6ry"]
+
+[ext_resource type="ArrayMesh" uid="uid://bhlu74nb1noyx" path="res://level/stone_wall.obj" id="1_1ktvp"]
+[ext_resource type="Material" uid="uid://df8mlsywvwydx" path="res://level/level_material.tres" id="2_clv6e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qrxqa"]
+size = Vector3(4, 3, 0.2)
+
+[node name="stone_wall" type="StaticBody3D"]
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_1ktvp")
+surface_material_override/0 = ExtResource("2_clv6e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_qrxqa")

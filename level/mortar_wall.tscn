@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://lfv48cydb2c0"]
+
+[ext_resource type="ArrayMesh" uid="uid://cb1b41op6wv1u" path="res://level/mortar_wall.obj" id="1_2foix"]
+[ext_resource type="Material" uid="uid://df8mlsywvwydx" path="res://level/level_material.tres" id="2_rhfwp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3sdru"]
+size = Vector3(10, 6, 0.6)
+
+[node name="mortar_wall" type="StaticBody3D"]
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_2foix")
+surface_material_override/0 = ExtResource("2_rhfwp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+shape = SubResource("BoxShape3D_3sdru")

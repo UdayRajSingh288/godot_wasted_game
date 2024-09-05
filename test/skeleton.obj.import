@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bpo4x8r4i400h"
+path="res://.godot/imported/skeleton.obj-9a86451c2149ce2a1c5264dd1c1efbfc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/skeleton.obj-9a86451c2149ce2a1c5264dd1c1efbfc.mesh"]
+
+source_file="res://test/skeleton.obj"
+dest_files=["res://.godot/imported/skeleton.obj-9a86451c2149ce2a1c5264dd1c1efbfc.mesh", "res://.godot/imported/skeleton.obj-9a86451c2149ce2a1c5264dd1c1efbfc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

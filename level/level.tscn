@@ -1,0 +1,144 @@
+[gd_scene load_steps=21 format=3 uid="uid://cc541k2mebvra"]
+
+[ext_resource type="Texture2D" uid="uid://deii4lhlkdqnr" path="res://level/sky.png" id="1_fbafu"]
+[ext_resource type="PackedScene" uid="uid://28ef7pih5k0f" path="res://level/point_1.tscn" id="2_a8bmp"]
+[ext_resource type="PackedScene" uid="uid://d30cvqcc0ilcy" path="res://player/player.tscn" id="3_asq17"]
+[ext_resource type="PackedScene" uid="uid://davw0qv5losss" path="res://level/jail_corridor.tscn" id="6_dy6fb"]
+[ext_resource type="PackedScene" uid="uid://qvdq1gm1cuba" path="res://level/floor.tscn" id="6_qluj3"]
+[ext_resource type="PackedScene" uid="uid://uh31tmqi2lw4" path="res://level/cross_arch_corridor.tscn" id="7_0eva7"]
+[ext_resource type="PackedScene" uid="uid://c236yoydo2kbu" path="res://level/arch_corridor.tscn" id="8_1bhcx"]
+[ext_resource type="PackedScene" uid="uid://csljjq00vk70u" path="res://level/point_2.tscn" id="11_3qb5a"]
+[ext_resource type="PackedScene" uid="uid://bbp0qoju6txns" path="res://level/stairs.tscn" id="13_yle71"]
+[ext_resource type="PackedScene" uid="uid://bgmaiy5cnpay0" path="res://level/point_3.tscn" id="14_jls27"]
+[ext_resource type="PackedScene" uid="uid://cfroyq0uhxa5c" path="res://level/point_5.tscn" id="14_vrvqs"]
+[ext_resource type="PackedScene" uid="uid://dm4h1dgfar6ry" path="res://level/stone_wall.tscn" id="15_q1ocb"]
+[ext_resource type="PackedScene" uid="uid://bdj8aatng1dad" path="res://level/balcony.tscn" id="15_uvha3"]
+[ext_resource type="PackedScene" uid="uid://cdorb1omvkatb" path="res://level/point_6.tscn" id="16_0k4yy"]
+[ext_resource type="PackedScene" uid="uid://ddknjdcouong4" path="res://level/point_4.tscn" id="16_v3tll"]
+[ext_resource type="PackedScene" uid="uid://lfv48cydb2c0" path="res://level/mortar_wall.tscn" id="17_owyys"]
+[ext_resource type="PackedScene" uid="uid://gqud8qeen0fq" path="res://test/guard.tscn" id="17_rydqh"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_v1nj6"]
+panorama = ExtResource("1_fbafu")
+
+[sub_resource type="Sky" id="Sky_ve10k"]
+sky_material = SubResource("PanoramaSkyMaterial_v1nj6")
+radiance_size = 1
+
+[sub_resource type="Environment" id="Environment_g27q2"]
+background_mode = 2
+background_energy_multiplier = 0.25
+sky = SubResource("Sky_ve10k")
+
+[node name="level" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_g27q2")
+
+[node name="player" parent="." instance=ExtResource("3_asq17")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+collision_mask = 6
+
+[node name="point_1" parent="." instance=ExtResource("2_a8bmp")]
+
+[node name="arch_corridor" parent="." instance=ExtResource("8_1bhcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+
+[node name="arch_corridor5" parent="." instance=ExtResource("8_1bhcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -42)
+
+[node name="arch_corridor3" parent="." instance=ExtResource("8_1bhcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 0)
+
+[node name="arch_corridor4" parent="." instance=ExtResource("8_1bhcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -3, 0)
+
+[node name="cross_corridor" parent="." instance=ExtResource("7_0eva7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, 0)
+
+[node name="floor" parent="." instance=ExtResource("6_qluj3")]
+transform = Transform3D(2.98023e-08, -1, 0, 1, 2.98023e-08, 0, 0, 0, 1, 10, 5, 0)
+
+[node name="jail_corridor" parent="." instance=ExtResource("6_dy6fb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, -11)
+
+[node name="jail_corridor2" parent="." instance=ExtResource("6_dy6fb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, -27)
+
+[node name="jail_corridor5" parent="." instance=ExtResource("6_dy6fb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32, 6, -27)
+
+[node name="jail_corridor3" parent="." instance=ExtResource("6_dy6fb")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 48, -3, -92)
+
+[node name="jail_corridor4" parent="." instance=ExtResource("6_dy6fb")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 64, -3, -92)
+
+[node name="cross_corridor2" parent="." instance=ExtResource("7_0eva7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, 0, -42)
+
+[node name="cross_corridor4" parent="." instance=ExtResource("7_0eva7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 6, -42)
+
+[node name="cross_corridor3" parent="." instance=ExtResource("7_0eva7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32, -3, -92)
+
+[node name="point_2" parent="." instance=ExtResource("11_3qb5a")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 32, -3, -51)
+
+[node name="arch_corridor2" parent="." instance=ExtResource("8_1bhcx")]
+transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, 32, -3, -73)
+
+[node name="stairs" parent="." instance=ExtResource("13_yle71")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 56, -3, 0)
+
+[node name="point_3" parent="." instance=ExtResource("14_jls27")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, -12, 6, -42)
+
+[node name="balcony" parent="." instance=ExtResource("15_uvha3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 6, -42)
+
+[node name="balcony3" parent="." instance=ExtResource("15_uvha3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32, 0, 7)
+
+[node name="point_4" parent="." instance=ExtResource("16_v3tll")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 80, 6, -20)
+
+[node name="mortar_wall" parent="." instance=ExtResource("17_owyys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, -3, -2.5)
+
+[node name="mortar_wall3" parent="." instance=ExtResource("17_owyys")]
+transform = Transform3D(2.98023e-08, 1, 0, 4.37114e-08, -1.3027e-15, -1, -1, 2.98023e-08, -4.37114e-08, 54, 3, 0)
+
+[node name="mortar_wall2" parent="." instance=ExtResource("17_owyys")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, -3, 2.5)
+
+[node name="floor2" parent="." instance=ExtResource("6_qluj3")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 54, 5, 0)
+
+[node name="floor3" parent="." instance=ExtResource("6_qluj3")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, -2.08616e-07, 2.08616e-07, 8.88178e-15, 1, 60, 3, 2)
+
+[node name="floor4" parent="." instance=ExtResource("6_qluj3")]
+transform = Transform3D(-4.37114e-08, -1, 9.1951e-16, 1, -4.37114e-08, -4.47035e-08, 4.47035e-08, -4.79616e-14, 1, 60, 3, -2)
+
+[node name="balcony4" parent="." instance=ExtResource("15_uvha3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32, -3, -99)
+
+[node name="floor5" parent="." instance=ExtResource("6_qluj3")]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 38, 2, -42)
+
+[node name="point_5" parent="." instance=ExtResource("14_vrvqs")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 72, -3, -92)
+
+[node name="stone_wall" parent="." instance=ExtResource("15_q1ocb")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26, -3, -92)
+
+[node name="point_6" parent="." instance=ExtResource("16_0k4yy")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -32, 6, -19)
+
+[node name="stone_wall2" parent="." instance=ExtResource("15_q1ocb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 6, -47)
+
+[node name="guard" parent="." instance=ExtResource("17_rydqh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0.1, 0)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwhtsthmq65ob"]
+
+[ext_resource type="ArrayMesh" uid="uid://cvatmrrq7wj11" path="res://level/wood_wall.obj" id="1_oo4ij"]
+[ext_resource type="Material" uid="uid://df8mlsywvwydx" path="res://level/level_material.tres" id="2_72frt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tnkw6"]
+size = Vector3(4, 3, 0.4)
+
+[node name="wood_wall" type="StaticBody3D"]
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_oo4ij")
+surface_material_override/0 = ExtResource("2_72frt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_tnkw6")

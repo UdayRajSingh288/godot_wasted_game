@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbp0qoju6txns"]
+
+[ext_resource type="ArrayMesh" uid="uid://misnfguqi32x" path="res://level/stairs.obj" id="1_r28lr"]
+[ext_resource type="Material" uid="uid://df8mlsywvwydx" path="res://level/level_material.tres" id="2_tlrtp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ac8t8"]
+size = Vector3(4, 0.25, 5)
+
+[node name="stairs" type="StaticBody3D"]
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_r28lr")
+surface_material_override/0 = ExtResource("2_tlrtp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.798636, -0.601815, 0, 0.601815, 0.798636, 0, 1.56066, -0.0606601)
+shape = SubResource("BoxShape3D_ac8t8")

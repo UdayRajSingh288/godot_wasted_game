@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=3 uid="uid://uh31tmqi2lw4"]
+
+[ext_resource type="PackedScene" uid="uid://c7y3mw8dky6df" path="res://level/arch.tscn" id="1_ymslc"]
+[ext_resource type="PackedScene" uid="uid://dm4h1dgfar6ry" path="res://level/stone_wall.tscn" id="2_s05kr"]
+[ext_resource type="PackedScene" uid="uid://qvdq1gm1cuba" path="res://level/floor.tscn" id="3_mrdsm"]
+[ext_resource type="PackedScene" uid="uid://0gi7sfu62wxa" path="res://level/lamp.tscn" id="4_m51l8"]
+[ext_resource type="PackedScene" uid="uid://de2t67wo6506w" path="res://level/stone_pillar.tscn" id="5_r2tpx"]
+
+[node name="cross_corridor" type="Node3D"]
+
+[node name="arch" parent="." instance=ExtResource("1_ymslc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="arch3" parent="." instance=ExtResource("1_ymslc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, 0)
+
+[node name="arch2" parent="." instance=ExtResource("1_ymslc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, 0)
+
+[node name="arch4" parent="." instance=ExtResource("1_ymslc")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.74846e-07, 3, -3)
+
+[node name="arch5" parent="." instance=ExtResource("1_ymslc")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.74846e-07, 3, 3)
+
+[node name="stone_wall" parent="." instance=ExtResource("2_s05kr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
+
+[node name="stone_wall2" parent="." instance=ExtResource("2_s05kr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, -3)
+
+[node name="stone_wall8" parent="." instance=ExtResource("2_s05kr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, -3)
+
+[node name="stone_wall3" parent="." instance=ExtResource("2_s05kr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+
+[node name="stone_wall4" parent="." instance=ExtResource("2_s05kr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="stone_wall5" parent="." instance=ExtResource("2_s05kr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, 0, 3)
+
+[node name="stone_wall7" parent="." instance=ExtResource("2_s05kr")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, 3)
+
+[node name="stone_wall6" parent="." instance=ExtResource("2_s05kr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="floor" parent="." instance=ExtResource("3_mrdsm")]
+
+[node name="floor6" parent="." instance=ExtResource("3_mrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+
+[node name="floor5" parent="." instance=ExtResource("3_mrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="floor4" parent="." instance=ExtResource("3_mrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="floor3" parent="." instance=ExtResource("3_mrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="floor2" parent="." instance=ExtResource("3_mrdsm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="lamp" parent="." instance=ExtResource("4_m51l8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 2, -1.85)
+
+[node name="lamp2" parent="." instance=ExtResource("4_m51l8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 2, -1.85)
+
+[node name="lamp3" parent="." instance=ExtResource("4_m51l8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 2, 2.15)
+
+[node name="lamp4" parent="." instance=ExtResource("4_m51l8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 2, 2.15)
+
+[node name="stone_pillar" parent="." instance=ExtResource("5_r2tpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="stone_pillar2" parent="." instance=ExtResource("5_r2tpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="stone_pillar3" parent="." instance=ExtResource("5_r2tpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+
+[node name="stone_pillar4" parent="." instance=ExtResource("5_r2tpx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)

@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://davw0qv5losss"]
+
+[ext_resource type="PackedScene" uid="uid://cviaxcjgg1uli" path="res://level/jail.tscn" id="1_6aau5"]
+[ext_resource type="PackedScene" uid="uid://qvdq1gm1cuba" path="res://level/floor.tscn" id="2_370m4"]
+[ext_resource type="PackedScene" uid="uid://c7y3mw8dky6df" path="res://level/arch.tscn" id="3_vsq1n"]
+[ext_resource type="PackedScene" uid="uid://0gi7sfu62wxa" path="res://level/lamp.tscn" id="4_d1p7o"]
+
+[node name="jail_corridor" type="Node3D"]
+
+[node name="jail" parent="." instance=ExtResource("1_6aau5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="jail2" parent="." instance=ExtResource("1_6aau5")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4, 0, 4)
+
+[node name="floor" parent="." instance=ExtResource("2_370m4")]
+
+[node name="floor2" parent="." instance=ExtResource("2_370m4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="floor3" parent="." instance=ExtResource("2_370m4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="floor4" parent="." instance=ExtResource("2_370m4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="arch" parent="." instance=ExtResource("3_vsq1n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="arch2" parent="." instance=ExtResource("3_vsq1n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, 0)
+
+[node name="arch3" parent="." instance=ExtResource("3_vsq1n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, 0)
+
+[node name="arch4" parent="." instance=ExtResource("3_vsq1n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 3, 0)
+
+[node name="lamp" parent="." instance=ExtResource("4_d1p7o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 1.85)
+
+[node name="lamp2" parent="." instance=ExtResource("4_d1p7o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 2, 1.85)
+
+[node name="lamp3" parent="." instance=ExtResource("4_d1p7o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, -1.85)
+
+[node name="lamp4" parent="." instance=ExtResource("4_d1p7o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, -1.85)

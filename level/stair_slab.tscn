@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba3rsbqc3q3f0"]
+
+[ext_resource type="ArrayMesh" uid="uid://dcpi4u5xcb645" path="res://level/stairs_slab.obj" id="1_34bep"]
+[ext_resource type="Material" uid="uid://df8mlsywvwydx" path="res://level/level_material.tres" id="2_hbd0c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uh7ci"]
+size = Vector3(4, 0.25, 4)
+
+[node name="stair_slab" type="StaticBody3D"]
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_34bep")
+surface_material_override/0 = ExtResource("2_hbd0c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_uh7ci")

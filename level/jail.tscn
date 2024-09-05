@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://cviaxcjgg1uli"]
+
+[ext_resource type="PackedScene" uid="uid://qvdq1gm1cuba" path="res://level/floor.tscn" id="1_uf0wd"]
+[ext_resource type="PackedScene" uid="uid://dm4h1dgfar6ry" path="res://level/stone_wall.tscn" id="2_q5uli"]
+[ext_resource type="PackedScene" uid="uid://d18cvnx13kknj" path="res://level/jail_bars.tscn" id="3_xawox"]
+[ext_resource type="PackedScene" uid="uid://dw5rla0vmc015" path="res://test/prisoner.tscn" id="4_u1fjh"]
+
+[node name="jail" type="Node3D"]
+
+[node name="floor" parent="." instance=ExtResource("1_uf0wd")]
+
+[node name="floor2" parent="." instance=ExtResource("1_uf0wd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="floor3" parent="." instance=ExtResource("1_uf0wd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="floor4" parent="." instance=ExtResource("1_uf0wd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="floor5" parent="." instance=ExtResource("1_uf0wd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="floor6" parent="." instance=ExtResource("1_uf0wd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, 0)
+
+[node name="floor7" parent="." instance=ExtResource("1_uf0wd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, 0)
+
+[node name="floor8" parent="." instance=ExtResource("1_uf0wd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 3, 0)
+
+[node name="stone_wall" parent="." instance=ExtResource("2_q5uli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="stone_wall2" parent="." instance=ExtResource("2_q5uli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
+
+[node name="stone_wall5" parent="." instance=ExtResource("2_q5uli")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6, 0, 0)
+
+[node name="stone_wall6" parent="." instance=ExtResource("2_q5uli")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0, 0)
+
+[node name="stone_wall7" parent="." instance=ExtResource("2_q5uli")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, 0)
+
+[node name="stone_wall8" parent="." instance=ExtResource("2_q5uli")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5, 0, 0)
+
+[node name="stone_wall9" parent="." instance=ExtResource("2_q5uli")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10, 0, 0)
+
+[node name="stone_wall3" parent="." instance=ExtResource("2_q5uli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+
+[node name="stone_wall4" parent="." instance=ExtResource("2_q5uli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2)
+
+[node name="jail_bars" parent="." instance=ExtResource("3_xawox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="jail_bars2" parent="." instance=ExtResource("3_xawox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="jail_bars3" parent="." instance=ExtResource("3_xawox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="jail_bars4" parent="." instance=ExtResource("3_xawox")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 2)
+
+[node name="prisoner" parent="." instance=ExtResource("4_u1fjh")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.5, 0.1, 0)
+
+[node name="prisoner2" parent="." instance=ExtResource("4_u1fjh")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -4, 0.1, 0)
+
+[node name="prisoner3" parent="." instance=ExtResource("4_u1fjh")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 3, 0.1, 0)
+
+[node name="prisoner4" parent="." instance=ExtResource("4_u1fjh")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 7.5, 0.1, 0)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw5rla0vmc015"]
+
+[ext_resource type="ArrayMesh" uid="uid://bpo4x8r4i400h" path="res://test/skeleton.obj" id="1_gknnl"]
+[ext_resource type="Script" path="res://test/prisoner.gd" id="1_ykvp2"]
+[ext_resource type="AudioStream" uid="uid://daa8fpvso77s7" path="res://test/123163main_casskr1112203_64kb-loop.wav" id="3_e3qx3"]
+
+[node name="prisoner" type="Node3D"]
+script = ExtResource("1_ykvp2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_gknnl")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+stream = ExtResource("3_e3qx3")
+max_distance = 10.0
+
+[connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://0gi7sfu62wxa"]
+
+[ext_resource type="ArrayMesh" uid="uid://dcix8lvkvh7xj" path="res://level/lamp.obj" id="1_o0sbx"]
+[ext_resource type="Material" uid="uid://df8mlsywvwydx" path="res://level/level_material.tres" id="2_h4tns"]
+
+[node name="lamp" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+layers = 2
+mesh = ExtResource("1_o0sbx")
+surface_material_override/0 = ExtResource("2_h4tns")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0.760784, 0.45098, 0.160784, 1)
+light_bake_mode = 1
